@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trino_001 - SQL at Any Scale, on Any Storage, in Any Environment</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #e9eef2;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+        }
+        .container {
+            width: 100%;
+            max-width: 900px;
+            margin: 30px 20px;
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            box-sizing: border-box;
+        }
+        h1 {
+            font-size: 2.8em;
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 15px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        h1::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+            height: 4px;
+            width: 60px;
+            background-color: #3498db;
+            border-radius: 2px;
+        }
+        h2 {
+            font-size: 1.8em;
+            color: #34495e;
+            border-bottom: 2px solid #ecf0f1;
+            padding-bottom: 10px;
+            margin-top: 35px;
+            margin-bottom: 20px;
+        }
+        h3 {
+            font-size: 1.5em;
+            color: #2980b9;
+            margin-bottom: 15px;
+        }
+        p {
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 20px;
+        }
+        ul li {
+            margin-bottom: 12px;
+            padding-left: 25px;
+            position: relative;
+            font-size: 1.1em;
+        }
+        ul li::before {
+            content: '•';
+            color: #3498db;
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-size: 1.2em;
+        }
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .back-link {
+            display: block;
+            margin-top: 30px;
+            text-align: center;
+            font-size: 1.1em;
+        }
+        .highlight {
+            background-color: #f8f9fa;
+            border-left: 4px solid #3498db;
+            padding: 15px 20px;
+            margin: 20px 0;
+            border-radius: 0 5px 5px 0;
+        }
+        .checkmark {
+            color: #27ae60;
+            font-weight: bold;
+            margin-right: 5px;
+        }
+        .emphasis {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        .section-title {
+            font-size: 1.3em;
+            color: #2980b9;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Trino_001: Core Value Proposition</h1>
+        
+        <div class="highlight">
+            <p>The phrase <span class="emphasis">"SQL at Any Scale, on Any Storage, in Any Environment"</span> is Trino's core value proposition.</p>
+        </div>
+        
+        <h2>Breaking Down Trino's Value Proposition</h2>
+        
+        <h3><span class="checkmark">✅</span> "SQL at Any Scale"</h3>
+        <p>You can use standard SQL to query data, whether it's:</p>
+        <ul>
+            <li><span class="emphasis">Small</span> (few MBs or rows)</li>
+            <li>Or <span class="emphasis">massive-scale</span> (petabytes across thousands of nodes)</li>
+        </ul>
+        <p>Trino is built for <span class="emphasis">high performance and scalability</span>, supporting <span class="emphasis">interactive querying</span> even on large datasets.</p>
+        <p>It achieves this with a distributed, <span class="emphasis">massively parallel processing (MPP)</span> architecture.</p>
+        
+        <h3><span class="checkmark">✅</span> "On Any Storage"</h3>
+        <p>Trino can query data <span class="emphasis">wherever it lives</span> — without requiring movement or duplication.</p>
+        <p>Supported sources include:</p>
+        <ul>
+            <li><span class="emphasis">Data lakes</span> (e.g., S3, HDFS, Azure Data Lake) via open formats like Parquet, ORC, Avro</li>
+            <li><span class="emphasis">Data warehouses</span> (e.g., Snowflake, BigQuery, Redshift)</li>
+            <li><span class="emphasis">Relational databases</span> (e.g., MySQL, PostgreSQL, SQL Server)</li>
+            <li><span class="emphasis">NoSQL stores</span> (e.g., Cassandra, MongoDB)</li>
+        </ul>
+        <p>This makes Trino a powerful <span class="emphasis">query federation engine</span>, allowing joins across different data sources.</p>
+        
+        <h3><span class="checkmark">✅</span> "In Any Environment"</h3>
+        <p>Trino can run:</p>
+        <ul>
+            <li>On-premises</li>
+            <li>In <span class="emphasis">any cloud</span> (AWS, Azure, GCP, hybrid cloud)</li>
+            <li>In <span class="emphasis">Kubernetes</span>, virtual machines, or bare-metal servers</li>
+        </ul>
+        <p>It integrates well into modern data platforms like <span class="emphasis">Data Mesh</span>, <span class="emphasis">Lakehouse</span>, or multi-cloud architectures</p>
+        
+        <h2><span class="section-title">🔍 Summary</span></h2>
+        <p>Trino lets you use familiar SQL to query <span class="emphasis">any kind of data</span>, at <span class="emphasis">any scale</span>, stored <span class="emphasis">anywhere</span>, and from <span class="emphasis">any infrastructure</span> — all without moving the data.</p>
+        
+        <h2><span class="section-title">📚 Learnings:</span></h2>
+        <ul>
+            <li>Trino is <span class="emphasis">storage-agnostic</span> and <span class="emphasis">infrastructure-neutral</span>.</li>
+            <li>It supports <span class="emphasis">federated queries</span>, making it a <span class="emphasis">unified query layer</span>.</li>
+            <li>Ideal for organizations with <span class="emphasis">diverse data systems</span> and <span class="emphasis">large-scale data processing needs</span>.</li>
+        </ul>
+        
+        <a href="index.html" class="back-link">← Back to Trino Main Page</a>
+        <a href="../index.html" class="back-link" style="margin-top: 10px;">← Back to Home</a>
+    </div>
+</body>
+</html>
