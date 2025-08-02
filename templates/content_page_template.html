@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trino - Technical Insights</title>
+    <title>SECTION_NAME - TOPIC_TITLE</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -104,38 +104,41 @@
             margin-top: 35px;
             margin-bottom: 20px;
         }
-        p {
-            margin-bottom: 10px;
+        h3 {
+            font-size: 1.4em;
+            color: #2c3e50;
+            margin-top: 25px;
+            margin-bottom: 15px;
         }
-        ul {
-            list-style: none;
-            padding: 0;
+        p {
             margin-bottom: 20px;
         }
-        ul li {
-            margin-bottom: 8px;
-            padding-left: 20px;
-            position: relative;
+        ul {
+            margin-bottom: 20px;
         }
-        ul li::before {
-            content: '•';
-            color: #3498db;
-            position: absolute;
-            left: 0;
-            top: 0;
+        li {
+            margin-bottom: 10px;
         }
-        .content-links a {
+        .highlight {
+            background-color: #f8f9fa;
+            border-left: 4px solid #3498db;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 5px 5px 0;
+        }
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ecf0f1;
+        }
+        .navigation a {
             color: #3498db;
             text-decoration: none;
         }
-        .content-links a:hover {
+        .navigation a:hover {
             text-decoration: underline;
-        }
-        .back-link {
-            display: block;
-            margin-top: 30px;
-            text-align: center;
-            font-size: 1.1em;
         }
         .home-link {
             display: block;
@@ -172,30 +175,56 @@
 <body>
     <div class="sidebar">
         <div class="sidebar-header">
-            <h2>Trino Insights</h2>
+            <h2>SECTION_NAME Insights</h2>
         </div>
         <ul class="nav-links">
-            <li><a href="index.html" class="active">Overview</a></li>
-            <li><a href="trino_001.html">Trino_001</a></li>
-            <li><a href="#">Trino_002</a></li>
-            <li><a href="#">Trino_003</a></li>
-            <li><a href="#">Trino_004</a></li>
+            <li><a href="index.html">Overview</a></li>
+            <li><a href="SECTION_NAME_001.html" class="active">SECTION_NAME_001</a></li>
+            <li><a href="#">SECTION_NAME_002</a></li>
+            <li><a href="#">SECTION_NAME_003</a></li>
+            <li><a href="#">SECTION_NAME_004</a></li>
         </ul>
         <a href="../index.html" class="home-link">← Back to Home</a>
     </div>
     
     <div class="main-content">
         <div class="container">
-            <h1>Trino - Technical Insights</h1>
-            <p>This page will contain various technical insights and explanations about Trino. You can add more specific topics as separate HTML files within this directory.</p>
+            <h1>TOPIC_TITLE</h1>
             
-            <h2>Topics:</h2>
-            <ul class="content-links">
-                <li><a href="trino_001.html">Trino_001: SQL at Any Scale, on Any Storage, in Any Environment</a></li>
-                <li><a href="#">Trino_002: Trino Architecture (Coming Soon)</a></li>
-                <li><a href="#">Trino_003: Connecting to Data Sources (Coming Soon)</a></li>
-                <li><a href="#">Trino_004: Optimizing Queries (Coming Soon)</a></li>
-            </ul>
+            <p>Introduction paragraph about this topic.</p>
+            
+            <h2>Section 1</h2>
+            <p>Content for section 1.</p>
+            
+            <div class="highlight">
+                <p>Key points:</p>
+                <ul>
+                    <li><strong>Point 1:</strong> Description</li>
+                    <li><strong>Point 2:</strong> Description</li>
+                    <li><strong>Point 3:</strong> Description</li>
+                    <li><strong>Point 4:</strong> Description</li>
+                </ul>
+            </div>
+            
+            <h2>Section 2</h2>
+            <p>Content for section 2.</p>
+            
+            <div class="highlight">
+                <p>Important information:</p>
+                <ul>
+                    <li><strong>Item 1:</strong> Description</li>
+                    <li><strong>Item 2:</strong> Description</li>
+                    <li><strong>Item 3:</strong> Description</li>
+                </ul>
+            </div>
+            
+            <h2>Summary</h2>
+            <p>Summary of the topic and key takeaways.</p>
+            
+            <div class="navigation">
+                <a href="index.html">← Back to Topics</a>
+                <a href="#">Next: Topic 2 →</a>
+            </div>
         </div>
     </div>
 </body>
