@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trino_001 - SQL at Any Scale, on Any Storage, in Any Environment</title>
+    <link rel="stylesheet" href="../css/shared-styles.css">
+    <script src="../js/sidebar-loader.js"></script>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -14,52 +16,6 @@
             color: #333;
             display: flex;
             min-height: 100vh;
-        }
-        .sidebar {
-            width: 250px;
-            background-color: #2c3e50;
-            color: #ecf0f1;
-            padding: 20px 0;
-            position: fixed;
-            height: 100%;
-            overflow-y: auto;
-            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-        }
-        .sidebar-header {
-            padding: 0 20px 20px 20px;
-            border-bottom: 1px solid #34495e;
-            margin-bottom: 20px;
-        }
-        .sidebar-header h2 {
-            color: #ecf0f1;
-            margin: 0;
-            font-size: 1.5em;
-            border-bottom: none;
-            padding-bottom: 0;
-        }
-        .nav-links {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-        .nav-links li {
-            padding: 0;
-            margin: 0;
-        }
-        .nav-links li a {
-            display: block;
-            padding: 12px 20px;
-            color: #ecf0f1;
-            text-decoration: none;
-            transition: background-color 0.3s;
-            border-left: 4px solid transparent;
-        }
-        .nav-links li a:hover, .nav-links li a.active {
-            background-color: #34495e;
-            border-left: 4px solid #3498db;
-        }
-        .nav-links li::before {
-            content: none;
         }
         .main-content {
             flex: 1;
@@ -199,13 +155,14 @@
         }
     </style>
 </head>
-<body>
+<body data-page="trino_001">
     <div class="sidebar">
         <div class="sidebar-header">
             <h2>Trino Insights</h2>
         </div>
         <ul class="nav-links">
             <li><a href="index.html">Overview</a></li>
+            <li><a href="trino_000.html">Trino_000</a></li>
             <li><a href="trino_001.html" class="active">Trino_001</a></li>
             <li><a href="trino_002.html">Trino_002</a></li>
             <li><a href="#">Trino_003</a></li>
@@ -263,8 +220,8 @@
                 <li>Ideal for organizations with <span class="emphasis">diverse data systems</span> and <span class="emphasis">large-scale data processing needs</span>.</li>
             </ul>
             <div class="navigation">
-                <a href="index.html">← Back to Topics</a>
-                <a href="trino_002.html">Next: Trino_002 →</a>
+                <a href="trino_000.html">← Previous: What is Trino?</a>
+                <a href="trino_002.html">Next: Technical Terms →</a>
             </div>
         </div>
     </div>
