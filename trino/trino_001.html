@@ -4,8 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trino_001 - SQL at Any Scale, on Any Storage, in Any Environment</title>
-    <link rel="stylesheet" href="../css/shared-styles.css">
-    <script src="../js/sidebar-loader.js"></script>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -134,6 +132,52 @@
         }
         .home-link:hover {
             background-color: #2980b9;
+        }
+        .sidebar {
+            width: 250px;
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 20px 0;
+            position: fixed;
+            height: 100%;
+            overflow-y: auto;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+        }
+        .sidebar-header {
+            padding: 0 20px 20px 20px;
+            border-bottom: 1px solid #34495e;
+            margin-bottom: 20px;
+        }
+        .sidebar-header h2 {
+            color: #ecf0f1;
+            margin: 0;
+            font-size: 1.5em;
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+        .nav-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .nav-links li {
+            padding: 0;
+            margin: 0;
+        }
+        .nav-links li a {
+            display: block;
+            padding: 12px 20px;
+            color: #ecf0f1;
+            text-decoration: none;
+            transition: background-color 0.3s;
+            border-left: 4px solid transparent;
+        }
+        .nav-links li a:hover, .nav-links li a.active {
+            background-color: #34495e;
+            border-left: 4px solid #3498db;
+        }
+        .nav-links li::before {
+            content: none;
         }
         @media (max-width: 768px) {
             body {
