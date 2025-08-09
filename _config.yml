@@ -13,8 +13,7 @@ nav:
     url: "/resume"
   - title: "Skills"
     url: "/#skills"
-  - title: "Technical Insights"
-    url: "/trino"
+
   - title: "Contact"
     url: "/#contact"
 

@@ -128,5 +128,5 @@ permalink: /trino/trino_003/
     <p>Trino is a <span class="emphasis">high-performance, distributed SQL engine</span> that enables <span class="emphasis">federated, interactive querying</span> over <span class="emphasis">any data source</span>, allowing organizations to extract insights faster without moving data or changing tools.</p>
   </div>
 
-  <p class="text-center mt-2"><a class="back-link" href="/trino/">&larr; Back to Trino Overview</a></p>
+
 </div>

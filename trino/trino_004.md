@@ -107,5 +107,5 @@ permalink: /trino/trino_004/
     <li>Type <span class="emphasis">quit</span>, <span class="emphasis">exit</span>, or press <span class="emphasis">Ctrl-D</span> to exit CLI</li>
   </ul>
 
-  <p class="text-center mt-2"><a class="back-link" href="/trino/">&larr; Back to Trino Overview</a></p>
+
 </div>

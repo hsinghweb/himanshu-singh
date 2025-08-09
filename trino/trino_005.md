@@ -65,5 +65,5 @@ permalink: /trino/trino_005/
     <li>Enables <span class="emphasis">parallel processing</span> and high scalability</li>
   </ul>
 
-  <p class="text-center mt-2"><a class="back-link" href="/trino/">&larr; Back to Trino Overview</a></p>
+
 </div>

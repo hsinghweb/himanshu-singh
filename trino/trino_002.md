@@ -113,5 +113,5 @@ permalink: /trino/trino_002/
     </tr>
   </table>
 
-  <p class="text-center mt-2"><a class="back-link" href="/trino/">&larr; Back to Trino Overview</a></p>
+
 </div>

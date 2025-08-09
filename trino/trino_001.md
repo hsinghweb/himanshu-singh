@@ -43,5 +43,5 @@ permalink: /trino/trino_001/
     <li>Ideal for organisations with diverse systems and large-scale data needs</li>
   </ul>
 
-  <p class="text-center mt-2"><a class="back-link" href="/trino/">&larr; Back to Trino Overview</a></p>
+
 </div>
