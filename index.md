@@ -27,7 +27,7 @@ title: "Himanshu Singh – Software Engineer"
         <p>Results-driven Software Engineer with 17+ years of expertise in designing, developing, and deploying scalable, high-performance backend systems in cloud-based environments.</p>
         <p>Proficient in Java, Spring Boot, Microservices, and cloud-native development. Experienced in Distributed Systems, RESTful APIs, and Microservices Architectures.</p>
         <p>Strong background in Agile methodologies, Behavior-Driven Development (BDD), Trunk-Based Development (TBD), CI/CD pipelines, and DevOps. Domain expertise in Build & Test Infrastructure, Security, Healthcare, Banking, Data Platforms, and Maps.</p>
-        <a href="/resume" class="card-link">View Full Resume</a>
+        <a href="{{ '/resume' | relative_url }}" class="card-link">View Full Resume</a>
       </div>
       <div class="about-image">
         <img src="Himanshu_Singh.JPG" alt="Himanshu Singh" style="width:100%;height:100%;object-fit:contain;border-radius:var(--border-radius);">
@@ -86,7 +86,7 @@ title: "Himanshu Singh – Software Engineer"
           <div class="card-content">
             <h3 class="card-title">Trino - Technical Deep Dive</h3>
             <p class="card-description">Explore technical insights about Trino, including its architecture, capabilities, and use cases.</p>
-            <a href="/trino" class="card-link">Learn More</a>
+            <a href="{{ '/trino' | relative_url }}" class="card-link">Learn More</a>
           </div>
         </div>
         <div class="card">
