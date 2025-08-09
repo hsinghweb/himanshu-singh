@@ -117,3 +117,16 @@ body.dark {
   cursor: pointer;
   font-size: 1.25rem;
 }
+
+/* Sidebar Layout for Trino pages */
+.layout-with-sidebar { display:flex; gap:2rem; }
+.sidebar { min-width:200px; background:var(--card-color); padding:1rem; border-radius:var(--border-radius); box-shadow:var(--box-shadow); }
+.sidebar ul { list-style:none; }
+.sidebar li { margin-bottom:.75rem; }
+.sidebar a { color:var(--text-color); text-decoration:none; font-weight:600; transition:color .3s; }
+.sidebar a:hover { color:var(--accent-color); }
+.sidebar a.active { color:var(--primary-color); }
+.content { flex:1; }
+
+/* Dark mode adjustments */
+body.dark .sidebar { background:#334155; }

@@ -20,7 +20,23 @@
   </header>
 
   <main class="page-content" style="padding:2rem 1rem;max-width:1200px;margin:0 auto;">
-    {{ content }}
+    {% if page.url contains '/trino/' %}
+      <div class="layout-with-sidebar">
+        <aside class="sidebar">
+          <ul>
+            {% assign trino_pages = site.pages | where_exp: "p", "p.url contains '/trino/'" | sort: 'url' %}
+            {% for tp in trino_pages %}
+              <li><a href="{{ tp.url | relative_url }}" {% if tp.url == page.url %}class="active"{% endif %}>{{ tp.title }}</a></li>
+            {% endfor %}
+          </ul>
+        </aside>
+        <section class="content">
+          {{ content }}
+        </section>
+      </div>
+    {% else %}
+      {{ content }}
+    {% endif %}
   </main>
 
   <footer class="site-footer" style="background:var(--primary-color);color:#fff;text-align:center;padding:1.5rem 0;">
