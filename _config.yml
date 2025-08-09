@@ -1,0 +1,23 @@
+title: "Himanshu Singh"
+description: "Personal profile website"
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://himanshu-singh.github.io" # your domain (update if custom)
+
+markdown: kramdown
+permalink: pretty
+
+nav:
+  - title: "About"
+    url: "/#about"
+  - title: "Resume"
+    url: "/resume"
+  - title: "Skills"
+    url: "/#skills"
+  - title: "Technical Insights"
+    url: "/trino"
+  - title: "Contact"
+    url: "/#contact"
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag

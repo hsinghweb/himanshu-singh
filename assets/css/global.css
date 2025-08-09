@@ -1,0 +1,119 @@
+:root {
+  --primary-color: #2563eb;
+  --secondary-color: #1e40af;
+  --accent-color: #3b82f6;
+  --text-color: #1e293b;
+  --light-text: #64748b;
+  --background-color: #f1f5f9;
+  --card-color: #ffffff;
+  --border-radius: 12px;
+  --box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height:1.6;
+  background:var(--background-color);
+  color:var(--text-color);
+}
+
+/* Containers */
+.container { max-width:1200px; margin:0 auto; padding:0 20px; }
+
+/* Buttons */
+.btn {
+  display:inline-block;
+  padding:0.5rem 1rem;
+  background:var(--primary-color);
+  color:#fff;
+  text-decoration:none;
+  border-radius:6px;
+  font-weight:500;
+  transition:background-color .3s ease;
+}
+.btn:hover { background:var(--secondary-color); }
+
+/* Cards */
+.cards {
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(300px,1fr));
+  gap:2rem;
+  margin-top:2rem;
+}
+.card {
+  background:var(--card-color);
+  border-radius:var(--border-radius);
+  overflow:hidden;
+  box-shadow:var(--box-shadow);
+  transition:transform .3s ease, box-shadow .3s ease;
+}
+.card:hover { transform:translateY(-5px); box-shadow:0 15px 30px -5px rgba(0,0,0,.15); }
+.card-image { height:200px; display:flex; align-items:center; justify-content:center; font-size:3rem; color:var(--primary-color); background:#dbeafe; }
+.card-content { padding:1.5rem; }
+.card-title { font-size:1.25rem; margin-bottom:.75rem; }
+.card-description { color:var(--light-text); margin-bottom:1.5rem; }
+.card-link {
+  display:inline-block;
+  padding:0.5rem 1rem;
+  background:var(--primary-color);
+  color:#fff;
+  text-decoration:none;
+  border-radius:6px;
+  font-weight:500;
+  transition:background-color .3s ease;
+}
+.card-link:hover { background:var(--secondary-color); }
+
+/* Section Title */
+.section-title {
+  font-size:2rem;
+  margin-bottom:2rem;
+  text-align:center;
+  position:relative;
+  padding-bottom:1rem;
+}
+.section-title::after {
+  content:'';
+  position:absolute;
+  bottom:0; left:50%; transform:translateX(-50%);
+  width:80px; height:4px; background:var(--primary-color); border-radius:2px;
+}
+
+/* Simple grid helpers */
+.grid { display:grid; gap:2rem; }
+.grid-2 { grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); }
+.grid-3 { grid-template-columns:repeat(auto-fill,minmax(250px,1fr)); }
+
+/* Utility */
+.text-center { text-align:center; }
+.mt-2 { margin-top:2rem; }
+
+/* Resume Specific */
+.contact-info p { text-align:center; margin:5px 0; }
+.experience-item { margin-bottom:2rem; padding-left:15px; border-left:4px solid var(--primary-color); }
+.experience-item h3 { margin:0 0 .5rem 0; color:var(--secondary-color); }
+.skills-list ul { display:flex; flex-wrap:wrap; gap:.5rem; margin-top:.5rem; }
+.skills-list li { background:#ecf0f1; color:var(--text-color); padding:.5rem 1rem; border-radius:20px; white-space:nowrap; }
+.back-link { color:var(--primary-color); text-decoration:none; }
+.back-link:hover { text-decoration:underline; }
+
+/* Dark Mode */
+body.dark {
+  --primary-color: #0f172a;
+  --secondary-color: #1e293b;
+  --accent-color: #3b82f6;
+  --text-color: #f8fafc;
+  --light-text: #94a3b8;
+  --background-color: #0f172a;
+  --card-color: #1e293b;
+  --box-shadow: 0 10px 25px -5px rgba(255, 255, 255, 0.05);
+}
+
+.theme-toggle {
+  background: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1.25rem;
+}

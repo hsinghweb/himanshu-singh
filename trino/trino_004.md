@@ -1,0 +1,111 @@
+---
+layout: default
+title: "Trino 004 – Running Trino"
+permalink: /trino/trino_004/
+---
+
+<div class="container">
+  <h1>Trino_004: Running Trino</h1>
+
+  <div class="highlight">
+    <p>Learn how to <span class="emphasis">run Trino using Docker</span> and understand its <span class="emphasis">key concepts</span>.</p>
+  </div>
+
+  <h2><span class="emoji">🐳</span> Running with Docker</h2>
+  <p>Start Trino using Docker with a single command:</p>
+  <div class="code-block">
+    docker run -d -p 8080:8080 --name trino-trial trinodb/trino
+  </div>
+  <p>This command:</p>
+  <ul>
+    <li>Downloads the <span class="emphasis">container image</span></li>
+    <li>Names it <span class="emphasis">trino-trial</span></li>
+    <li>Runs it in the <span class="emphasis">background</span></li>
+    <li>Maps <span class="emphasis">port 8080</span> to your workstation</li>
+  </ul>
+
+  <h2><span class="emoji">💻</span> Using the CLI</h2>
+  <p>Connect to the container and run queries:</p>
+  <div class="code-block">
+    $ docker exec -it trino-trial trino<br>
+    trino> SELECT COUNT(*) FROM tpch.sf1.nation;<br>
+    _col0------<br>
+    25<br>
+    (1 row)
+  </div>
+
+  <h2><span class="emoji">🔍</span> Exploring Available Data</h2>
+  <h3>Show Catalogs</h3>
+  <div class="code-block">
+    trino> SHOW CATALOGS;<br>
+    Catalog<br>
+    ---------<br>
+    jmx<br>
+    memory<br>
+    system<br>
+    tpcds<br>
+    tpch
+  </div>
+
+  <h3>Show Schemas</h3>
+  <div class="code-block">
+    trino> SHOW SCHEMAS FROM tpch;<br>
+    Schema<br>
+    --------------------<br>
+    information_schema<br>
+    sf1<br>
+    sf100<br>
+    <!-- more schemas -->
+  </div>
+
+  <h3>Show Tables</h3>
+  <div class="code-block">
+    trino> SHOW TABLES FROM tpch.sf1;<br>
+    Table<br>
+    ----------<br>
+    customer<br>
+    lineitem<br>
+    nation
+    <!-- more tables -->
+  </div>
+
+  <h2><span class="emoji">🔑</span> Key Concepts</h2>
+  <div class="highlight">
+    <p>Understanding these concepts is crucial for working with Trino effectively.</p>
+  </div>
+
+  <h3>Connector</h3>
+  <ul>
+    <li>Adapts Trino to a <span class="emphasis">data source</span></li>
+    <li>Every catalog is associated with a <span class="emphasis">specific connector</span></li>
+  </ul>
+
+  <h3>Catalog</h3>
+  <ul>
+    <li>Defines details for <span class="emphasis">accessing a data source</span></li>
+    <li>Contains <span class="emphasis">schemas</span></li>
+    <li>Configures a specific <span class="emphasis">connector</span> to use</li>
+  </ul>
+
+  <h3>Schema</h3>
+  <ul>
+    <li>A way to <span class="emphasis">organize tables</span></li>
+    <li>Combined with catalog defines a set of <span class="emphasis">queryable tables</span></li>
+  </ul>
+
+  <h3>Table</h3>
+  <ul>
+    <li>A set of <span class="emphasis">unordered rows</span></li>
+    <li>Organized into <span class="emphasis">named columns</span> with data types</li>
+  </ul>
+
+  <h2><span class="section-title">📝 Additional Notes</span></h2>
+  <ul>
+    <li>Use <span class="emphasis">USE catalog.schema</span> to set default context</li>
+    <li>Start CLI with <span class="emphasis">--catalog</span> and <span class="emphasis">--schema</span> for specific context</li>
+    <li>Access via <span class="emphasis">JDBC driver</span> available for Java applications</li>
+    <li>Type <span class="emphasis">quit</span>, <span class="emphasis">exit</span>, or press <span class="emphasis">Ctrl-D</span> to exit CLI</li>
+  </ul>
+
+  <p class="text-center mt-2"><a class="back-link" href="/trino/">&larr; Back to Trino Overview</a></p>
+</div>

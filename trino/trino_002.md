@@ -1,0 +1,117 @@
+---
+layout: default
+title: "Trino 002 – Technical Terms Explained"
+permalink: /trino/trino_002/
+---
+
+<div class="container">
+  <h1>Trino_002: Technical Terms Explained</h1>
+
+  <div class="highlight">
+    <p>Let's dive deeper into each of the key technical terms from the Trino explanation.</p>
+  </div>
+
+  <h2><span class="emoji">🔹</span> 1. Interactive Querying</h2>
+
+  <h3>What it means:</h3>
+  <p>"Interactive querying" refers to the ability to <span class="emphasis">run SQL queries and get results quickly</span>, often <span class="emphasis">within seconds</span>, so that humans can interact with the system in real-time.</p>
+
+  <h3>Context in Trino:</h3>
+  <ul>
+    <li>Traditional big data systems (like Hadoop) can be slow — taking <span class="emphasis">minutes or hours</span> to return results.</li>
+    <li>Trino is designed for <span class="emphasis">low-latency execution</span>, so analysts, engineers, or data scientists can:
+      <ul>
+        <li>Run ad hoc queries</li>
+        <li>Explore data on the fly</li>
+        <li>Iterate fast in tools like <span class="emphasis">Jupyter</span>, <span class="emphasis">Superset</span>, or <span class="emphasis">SQL editors</span></li>
+      </ul>
+    </li>
+  </ul>
+
+  <h3>Example:</h3>
+  <div class="highlight">
+    <p>Instead of waiting 20 minutes for a Hive job to finish, Trino can return the same result in <span class="emphasis">under 10 seconds</span>.</p>
+  </div>
+
+  <h2><span class="emoji">🔹</span> 2. Massively Parallel Processing (MPP)</h2>
+
+  <h3>What it means:</h3>
+  <p>MPP is an architecture where a query is <span class="emphasis">broken down into smaller pieces</span> and <span class="emphasis">executed in parallel across many nodes or servers</span>.</p>
+
+  <h3>Context in Trino:</h3>
+  <ul>
+    <li>Trino uses a <span class="emphasis">coordinator + worker nodes model</span>:
+      <ul>
+        <li>The <span class="emphasis">coordinator</span> breaks a SQL query into smaller tasks (called "fragments")</li>
+        <li>The <span class="emphasis">worker nodes</span> execute those tasks <span class="emphasis">in parallel</span>, handling:
+          <ul>
+            <li>Table scans</li>
+            <li>Joins</li>
+            <li>Aggregations</li>
+            <li>Filtering, etc.</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li>This parallelism leads to <span class="emphasis">high performance</span>, especially on large datasets.</li>
+  </ul>
+
+  <h3>Example:</h3>
+  <div class="highlight">
+    <p>If you're querying 10 TB of data, Trino splits the work across 100 worker nodes — each node processes 100 GB simultaneously. This speeds up the query significantly.</p>
+  </div>
+
+  <h2><span class="emoji">🔹</span> 3. Query Federation Engine</h2>
+
+  <h3>What it means:</h3>
+  <p>A <span class="emphasis">query federation engine</span> lets you <span class="emphasis">query data from multiple, heterogeneous sources</span> — <span class="emphasis">as if it were a single database</span>.</p>
+
+  <h3>Context in Trino:</h3>
+  <ul>
+    <li>Trino supports <span class="emphasis">connectors</span> to many systems: Hive, MySQL, S3, MongoDB, BigQuery, etc.</li>
+    <li>You can <span class="emphasis">join a MySQL table with a Parquet file in S3</span> in a single SQL query.</li>
+    <li>This eliminates the need to <span class="emphasis">ETL (extract, transform, load)</span> data into a central warehouse.</li>
+  </ul>
+
+  <h3>Example SQL in Trino:</h3>
+  <div class="code-block">
+    SELECT s.name, o.total<br>
+    FROM mysql.sales.customers s<br>
+    JOIN hive.analytics.orders o<br>
+      ON s.customer_id = o.customer_id<br>
+    WHERE o.total > 1000;
+  </div>
+
+  <p>This query:</p>
+  <ul>
+    <li>Reads from <span class="emphasis">MySQL</span> (`mysql.sales.customers`)</li>
+    <li>Joins with a table in <span class="emphasis">S3</span> or <span class="emphasis">HDFS</span> (`hive.analytics.orders`)</li>
+    <li>Runs <span class="emphasis">without moving the data beforehand</span></li>
+  </ul>
+
+  <h2><span class="section-title">📚 Learnings Summary:</span></h2>
+  <table>
+    <tr>
+      <th>Term</th>
+      <th>Meaning</th>
+      <th>Benefit</th>
+    </tr>
+    <tr>
+      <td><span class="emphasis">Interactive Querying</span></td>
+      <td>Fast, low-latency SQL execution</td>
+      <td>Enables real-time data exploration</td>
+    </tr>
+    <tr>
+      <td><span class="emphasis">MPP (Massively Parallel Processing)</span></td>
+      <td>Splits query into tasks run in parallel</td>
+      <td>Scales efficiently on large data</td>
+    </tr>
+    <tr>
+      <td><span class="emphasis">Query Federation</span></td>
+      <td>Combines data from multiple sources</td>
+      <td>No need for complex ETL pipelines</td>
+    </tr>
+  </table>
+
+  <p class="text-center mt-2"><a class="back-link" href="/trino/">&larr; Back to Trino Overview</a></p>
+</div>
