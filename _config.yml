@@ -1,7 +1,7 @@
 title: "Himanshu Singh"
 description: "Personal profile website"
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://himanshu-singh.github.io" # your domain (update if custom)
+baseurl: "/himanshu-singh" # subpath for GitHub Pages project site
+url: "https://hsinghweb.github.io" # root domain for the user/organization
 
 markdown: kramdown
 permalink: pretty
