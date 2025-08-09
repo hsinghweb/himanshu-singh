@@ -30,7 +30,7 @@ title: "Himanshu Singh – Software Engineer"
         <a href="{{ '/resume' | relative_url }}" class="card-link">View Full Resume</a>
       </div>
       <div class="about-image">
-        <img src="Himanshu_Singh.JPG" alt="Himanshu Singh" style="width:100%;height:100%;object-fit:contain;border-radius:var(--border-radius);">
+        <img src="Himanshu_Singh.JPG" alt="Himanshu Singh" style="width:25%height:25%;object-fit:contain;border-radius:var(--border-radius);">
       </div>
     </section>
 
